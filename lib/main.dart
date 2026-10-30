@@ -134,7 +134,7 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
                 child: DropdownButton<String>(
                   isExpanded: true,
                   value: _selectedRole,
-                  items: ['Student', 'Developer', 'Designer'].map((String role) {
+                  items: ['Student', 'Developer', 'Designer', 'Lecturer', 'Staff'].map((String role) {
                     return DropdownMenuItem<String>(
                       value: role,
                       child: Text(role),
@@ -192,7 +192,7 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
   }
 
   void _showCupertinoRolePicker(BuildContext context) {
-    final List<String> roles = ['Student', 'Developer', 'Designer'];
+    final List<String> roles = ['Student', 'Developer', 'Designer', 'Lecturer', 'Staff'];
     showCupertinoModalPopup(
       context: context,
       builder: (_) => Container(
